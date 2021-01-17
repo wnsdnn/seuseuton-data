@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <script src="./js/jquery-1.12.3.js"></script>
+</head>
+<body>
+    <div class="progress">
+        <span class="bar"></span>
+      </div>
+    <header class="header">
+        <img src="./img/housekeeping@2x_png.png" alt="" class="logo">
+        <ul class="menu">
+            <li><a href="">오늘의 수입 지출</a></li>
+            <li><a href="" class="action">날짜별</a></li>
+            <li><a href="">한눈에 보기</a></li>
+        </ul>
+    </header>
+    <div class="calendar">
+        <div class="header">
+            <div class="year-month"></div>
+            <div class="nav">
+                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+              </div>
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">SUN</div>
+                <div class="day">MON</div>
+                <div class="day">THE</div>
+                <div class="day">WED</div>
+                <div class="day">THU</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+    </div>
+    <section class="popup">
+        <div>
+            <div class="box"></div>
+            <ul class="tab">
+                <li class="active">수입</li>
+                <li>지출</li>
+            </ul>
+            <article class="tab_profits active">
+                <div class="profits">
+                    <h3>ㅇㅇㅇ</h3>
+                    <h3>+20000원</h3>
+                </div>
+            </article>
+            <article class="tab_spending">
+                <div class="spending">
+                    <h3>ㅇㅇㅇ</h3>
+                    <h3>-20000원</h3>
+                </div>
+            </article>
+            <div class="popup_close">
+                <span><a href="#">[닫기]</a></span>
+            </div>
+        </div>
+    </section>
+    <script src="./js/calendar.js"></script>
+</body>
+</html>

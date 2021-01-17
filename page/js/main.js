@@ -60,5 +60,7 @@ function count_btm(){
     }
 }
 
+
+
 $(document)
 .on('ready', slide)
