@@ -96,7 +96,7 @@ renderCalendar();
 
 function tabMenu(){
     var index = $(this).parent().index()
-    $('.tab li.active').removeClass('active')
+    $('.tab span.active').removeClass('active')
     $(this).addClass('active')
 
     var target = index === 0 ? $('.tab_profits') : $('.tab_spending')
@@ -112,5 +112,5 @@ function popupToggle() {
 
 
 $(document)
-.on('click', '.tab li', tabMenu)
+.on('click', '.tab span', tabMenu)
 .on('click', '.dates .date, .popup_close', popupToggle)
