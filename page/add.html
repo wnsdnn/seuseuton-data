@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="./css/add.css">
+    <title>add</title>
+</head>
+<body>
+    <div class="progress">
+        <span class="bar"></span>
+      </div>
+    <header class="header">
+        <a href="./main.html"><img src="./img/housekeeping@2x_png.png" alt="" class="logo"></a>
+        <ul class="menu">
+            <li><a href="./add.html" class="action">오늘의 수입 지출</a></li>
+            <li><a href="./calendar.html">날짜별</a></li>
+            <li><a href="./chart.html">한눈에 보기</a></li>
+        </ul>
+    </header>
+<main>
+    <div class="box">
+        <ul class="tab">
+            <li><span class="active">수입</span></li>
+            <li><span>지출</span> </li>
+        </ul>
+        <article class="tab_profits active">
+            <form action="">
+                <div class="int">
+                    <label for="day">날짜</label>
+                    <input class="year-month-day" type="text" name="day" id = "day"  autocomplete="off" readonly>
+                </div>
+                <div class="int">
+                    <label for="amount">금액</label>
+                    <input type="text" name="amount" id = "amount" autocomplete="off" required>
+                </div>
+                <div class="int">
+                    <label for="sort">분류</label>
+                    <input type="text" name="sort" id = "sort" autocomplete="off" required>
+                </div>
+                <div class="int">
+                    <label for="memo">메모</label>
+                    <input type="text" name="memo" id = "memo" autocomplete="off" required>
+                </div>
+                <div class="but">
+                    <button type="submit" id="btn">추가하기</button>
+                </div>
+            </form>
+        </article>
+        <article class="tab_spending">
+            <form action="">
+                <div class="int">
+                    <label for="day">날짜</label>
+                    <input class="year-month-day2" type="text" name="day" id = "day"  autocomplete="off" readonly>
+                </div>
+                <div class="int">
+                    <label for="amount">금액</label>
+                    <input type="text" name="amount" id = "amount" autocomplete="off" required>
+                </div>
+                <div class="int">
+                    <label for="sort">분류</label>
+                    <input type="text" name="sort" id = "sort" autocomplete="off" required>
+                </div>
+                <div class="int">
+                    <label for="memo">메모</label>
+                    <input type="text" name="memo" id = "memo" autocomplete="off" required>
+                </div>
+                <div class="but">
+                    <button type="submit" id="btn">추가하기</button>
+                </div>
+            </form>
+        </article>
+    </div>
+</main>
+</body>
+<script src="./js/add.js"></script>
+</html>

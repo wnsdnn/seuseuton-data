@@ -1,5 +1,5 @@
 // Date 객체 생성
-let date = new Date();
+let date = new Date(); 
 
 const renderCalendar = () => {
   const viewYear = date.getFullYear();
@@ -50,16 +50,6 @@ const renderCalendar = () => {
   // Dates 그리기
   document.querySelector('.dates').innerHTML = dates.join('');
 
-  // 오늘 날짜 그리기
-  const today = new Date();
-  if (viewMonth === today.getMonth && viewYear === today.getFullYear) {
-    for (let date of document.querySelectorAll('this')) {
-      if (+date.innerText === today.getDate()) {
-        date.classList.add('today');
-        break;
-      }
-    }
-  }
 
 }
 

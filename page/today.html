@@ -1,59 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calendar</title>
-    <link rel="stylesheet" href="./css/calendar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="./css/today.css">
+    <title>today</title>
 </head>
 <body>
+    <div class="background"></div>
     <div class="progress">
         <span class="bar"></span>
       </div>
     <header class="header">
         <a href="./main.html"><img src="./img/housekeeping@2x_png.png" alt="" class="logo"></a>
         <ul class="menu">
-            <li><a href="./add.html">오늘의 수입 지출</a></li>
-            <li><a href="./calendar.html" class="action">날짜별</a></li>
+            <li><a href="./add.html" class="action">오늘의 수입 지출</a></li>
+            <li><a href="./calendar.html">날짜별</a></li>
             <li><a href="./chart.html">한눈에 보기</a></li>
         </ul>
     </header>
-    <div class="calendar">
-        <div class="header">
-            <div class="year-month"></div>
-            <div class="nav">
-                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-                <button class="nav-btn go-today" onclick="goToday()">Today</button>
-                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
-              </div>
-        </div>
-        <div class="main">
-            <div class="days">
-                <div class="day">SUN</div>
-                <div class="day">MON</div>
-                <div class="day">THE</div>
-                <div class="day">WED</div>
-                <div class="day">THU</div>
-                <div class="day">FRI</div>
-                <div class="day">SAT</div>
-            </div>
-            <div class="dates"></div>
-        </div>
-    </div>
-    <section class="popup">
-        <div>
-            <div class="box"></div>
+    <main>
+        <div class="box">
             <ul class="tab">
                 <li><span class="active">수입</span></li>
                 <li><span>지출</span></li>
             </ul>
             <article class="tab_profits active">
+                <div class="year-month-day"></div>
                 <div class="profits">
                     <h3>ㅇㅇㅇ</h3>
                     <h3>+20000원</h3>
                 </div>
             </article>
             <article class="tab_spending">
+                <div class="year-month-day" id="year-month-day2"></div>
                 <div class="spending">
                     <h3>ㅇㅇㅇ</h3>
                     <h3>-40000원</h3>
@@ -71,11 +52,9 @@
                     <h3>-40000원</h3>
                 </div>
             </article>
-            <div class="popup_close">
-                <span><a href="#">[닫기]</a></span>
-            </div>
         </div>
-    </section>
-    <script src="./js/calendar.js"></script>
+    </main>
+    <button><a href="./add.html">수입&지출내역 추가</a></button>
 </body>
+<script src="./js/today.js"></script>
 </html>
